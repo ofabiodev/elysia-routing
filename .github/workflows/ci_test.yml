@@ -1,0 +1,26 @@
+name: "🧪 CI — Test"
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+    workflow_dispatch:
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: ➕ Actions - Checkout
+              uses: actions/checkout@v6
+            
+            - name: ➕ Actions - Setup Bun
+              uses: oven-sh/setup-bun@v2
+              with:
+                bun-version: latest
+            
+            - name: 📦 Install Dependencies
+              run: bun ci
+            
+            - name: 🧪 Run Tests
+              run: bun test

@@ -1,0 +1,57 @@
+{
+  "name": "elysia-routing",
+  "version": "1.0.0",
+  "description": "Declarative routing for Elysia that turns simple definitions into clean predictable routes.",
+  "license": "MIT",
+  "homepage": "https://github.com/ofabiodev/elysia-routing/blob/main/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ofabiodev/elysia-routing.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ofabiodev/elysia-routing/issues"
+  },
+  "author": {
+    "name": "ofabiodev",
+    "url": "https://github.com/ofabiodev"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "test": "poku --include='tests'",
+    "lint": "biome lint --error-on-warnings"
+  },
+  "keywords": [
+    "elysia",
+    "routing",
+    "file-based-routing",
+    "typescript",
+    "validation",
+    "schema",
+    "api",
+    "rest",
+    "http",
+    "framework",
+    "bun",
+    "type-safe",
+    "dynamic-routes",
+    "catch-all",
+    "middleware"
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "2.3.11",
+    "@types/bun": "latest",
+    "@types/node": "^25.0.6",
+    "poku": "^3.0.2",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "elysia": "^1.4.21"
+  }
+}
