@@ -59,7 +59,7 @@ export function scanRoutes(
       if (!METHODS.includes(method)) continue
 
       const name = parts.join(".")
-      const routePath = name === "index" ? prefix || "/" : `${prefix}/${name}`
+      const routePath = name === "index" || name === "route" ? prefix || "/" : `${prefix}/${name}`
 
       routes.push({
         path: fullPath,
